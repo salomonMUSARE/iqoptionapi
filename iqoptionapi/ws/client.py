@@ -52,6 +52,7 @@ class WebsocketClient(object):
         logger.debug(message)
 
         message = json.loads(str(message))
+        print(message)
 
         if message["name"] == "timeSync":
             self.api.timesync.server_timestamp = message["msg"]
