@@ -239,6 +239,7 @@ class WebsocketClient(object):
                                   ["asset_id"]] = message["msg"]["value"]
         # ------for forex&cfd&crypto..
         elif message["name"] == "order-placed-temp":
+            print(message)
             self.api.buy_order_id = message["msg"]["id"]
         elif message["name"] == "order":
             self.api.order_data = message
